@@ -4,6 +4,8 @@ OVEIO Craft 3 Starter provides a quick-start project scaffold for Craft CMS webs
 
 ## Usage
 
+Create your .env file
+
 ```bash
 cp .env.example .env
 ```
