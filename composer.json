@@ -1,8 +1,9 @@
 {
   "require": {
+    "php": ">=7.4.0",
     "craftcms/cms": "^3.7.26",
-    "vlucas/phpdotenv": "^5.4.0",
-    "php": ">=7.4.0"
+    "misterbk/mix": "1.5.2",
+    "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
     "yiisoft/yii2-shell": "^2.0.3"

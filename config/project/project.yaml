@@ -1,4 +1,4 @@
-dateModified: 1650020949
+dateModified: 1650025492
 email:
   fromEmail: dean@oveio.io
   fromName: 'Craft3 Starter'
@@ -8,6 +8,11 @@ meta:
     8d5b3ffd-ea97-46ea-86ad-9ad5f00b7fac: 'Craft3 Starter' # Craft3 Starter
     454d3a80-eac3-423a-a1a2-ae2744803e67: 'Craft3 Starter' # Craft3 Starter
     83876ca5-c524-47de-80d4-66e246118897: Common # Common
+plugins:
+  mix:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
