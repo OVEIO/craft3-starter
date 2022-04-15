@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <title>Welcome to Craft CMS</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <style>
+    html,
+    body {
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+      height: 100%;
+      font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: hsl(212, 60%, 97%);
+      color: hsl(209, 18%, 30%);
+      display: flex;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-top: 24px;
+      font-size: 1em;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.4em;
+      margin-bottom: 1.4em;
+    }
+
+    ul {
+      line-height: 1.3em;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.35em;
+    }
+
+    a {
+      color: #0B69A3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .go {
+      color: #0B69A3;
+    }
+
+    .go:after {
+      padding-left: 4px;
+      content: '→';
+      text-decoration: none !important;
+    }
+
+    small {
+      color: hsl(211, 11%, 59%);
+    }
+
+    code {
+      display: inline-block;
+      color: #EF4E4E;
+      padding: 0 2px;
+      background: hsl(212, 60%, 97%);
+      border-radius: 3px;
+      line-height: 1.3;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-size: 0.9em;
+    }
+
+    #container {
+      flex-grow: 1;
+    }
+
+    #modal {
+      background: #fff;
+    }
+
+    #aside {
+      background: hsl(212, 60%, 97%);
+    }
+
+    .content {
+      padding: 35px;
+      padding-left: calc(35px + env(safe-area-inset-left));
+      padding-right: calc(35px + env(safe-area-inset-right));
+    }
+
+    @media (min-width:768px) {
+      #modal {
+        display: flex;
+      }
+
+      #main {
+        width: 50%;
+        overflow: auto;
+      }
+
+      #aside {
+        width: 50%;
+        overflow: auto;
+      }
+    }
+
+    @media (min-width:768px) and (min-height: 376px) {
+      body {
+        background-color: hsl(212, 50%, 93%);
+        background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      #container {
+        display: flex;
+        padding: 24px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #modal {
+        height: 100%;
+        max-width: 800px;
+        max-height: 525px;
+        border-radius: 4px;
+        overflow: auto;
+        box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+      }
+
+      #aside {
+        overflow: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="ltr">
+  <div id="container">
+    <div id="modal">
+      <div id="main">
+        <div class="content">
+          <div style="display:flex;flex-direction:row;align-items:center;justify-content:center;margin-bottom:10px;">
+            <img style="width: 100px;margin-bottom:10px;"
+              src="data:image/png;base64,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" />
+          </div>
+          <h1>OVEIO Craft 3 Starter V1.0</h1>
+          <p>Craft CMS Is installed and working. Congratuations!</p>
+          <p>You’re looking at the <code>index.twig</code> template file located in your
+            <code>templates/</code> folder. Once you’re ready to start building out your site’s
+            front end, you can replace this with something custom.
+          </p>
+          <p><span class="go"><a href="{{ cpUrl('') }}">Go to control panel</a></span></p>
+        </div>
+      </div>
+      <div id="aside">
+        <div class="content">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://github.com/OVEIO/craft3-starter"
+                target="_blank">OVEIO Craft 3 Starter On Github</a></li>
+            <li><a href="https://craftcms.com/docs/3.x/" target="_blank">Craft CMS Documentation</a></li>
+            <li><a href="https://laravel-mix.com/docs/6.0/installation" target="_blank">Laravel Mix Documentation</a></li>
+            <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">Bootstrap 5.0 Documentation</a></li>
+            
+            <li><a href="https://craftcms.com/guides" target="_blank">Craft CMS Knowledge Base</a></li>
+            <li><a href="http://craftcms.stackexchange.com/" target="_blank">Craft CMS Stack Exchange</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

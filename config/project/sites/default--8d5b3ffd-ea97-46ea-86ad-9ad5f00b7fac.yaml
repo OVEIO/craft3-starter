@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-GB
+name: 'Craft3 Starter'
+primary: true
+siteGroup: 454d3a80-eac3-423a-a1a2-ae2744803e67 # Craft3 Starter
+sortOrder: 1
