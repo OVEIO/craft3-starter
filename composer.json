@@ -1,5 +1,5 @@
 {
-  "name": "OVEIO/Craft3_Starter",
+  "name": "oveio/craft3_starter",
   "require": {
     "php": ">=7.4.0",
     "craftcms/cms": "^3.7.26",
