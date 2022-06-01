@@ -1,23 +1,23 @@
-const mix = require('laravel-mix');
-const EasyEnv = require('easy-env-loader');
-const path = require('path');
+const mix = require('laravel-mix')
 
-// Load in the .env file so that we can proxy the corrent URL
-const options = {
-    envPath:path.resolve(__dirname, './.env'),
-};
- 
-const env = new EasyEnv(options);
-process.env = env.parsed;
+require('dotenv').config()
 
-mix.sass('src/scss/app.scss','css/app.css')
-.js('src/js/app.js','js/app.js')
-.setPublicPath('web/assets');
+mix
+  .sass('src/scss/app.scss', 'css/app.css')
+  .js('src/js/app.js', 'js/app.js')
+  .setPublicPath('web/')
+  .version()
 
 mix.browserSync({
   proxy: {
     target: process.env.PRIMARY_SITE_URL,
   },
-  files: ['web/assets/css/*.css','web/assets/js/*.js','templates/***/*','templates/*'],
-  secure:false
-});
+  files: [
+    'web/css/*.css',
+    'web/js/*.js',
+    'templates/***/**/*',
+    'templates/***/*',
+    'templates/*',
+  ],
+  secure: false,
+})
