@@ -1,6 +1,6 @@
-# OVEIO Craft 3 Starter
+# OVEIO Craft 4 Starter
 
-OVEIO Craft 3 Starter provides a quick-start project scaffold for Craft CMS websites. It uses Laravel Mix to build front-end assets.
+OVEIO Craft 4 Starter provides a quick-start project scaffold for Craft CMS websites. It uses Laravel Mix to build front-end assets.
 
 ## Usage
 
