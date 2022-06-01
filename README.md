@@ -31,8 +31,8 @@ Mix will watch you templates and scss/js files and build them whenever they chan
 The mix plugin is included by default and provides an easy way to include your compiled assets in your templates.
 
 ```html
-<link rel="stylesheet" href="{{ mix('css/app.css') }}">
-<script src="{{ mix('js/app.js') }}"></script>
+<link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+<script src="{{ mix('/js/app.js') }}"></script>
 ```
 
 ## Contributing
